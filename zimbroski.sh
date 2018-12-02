@@ -4,7 +4,7 @@
 # Script Name      : zimbroski                                                                                           
 # Description      : Backup and restore zimbra                                                                                                                                                                      
 # Author       	   : Aleksandar Stojkovski                                              
-# Email         	 : aleksandar@stojkovski.ch                                          
+# Email            : aleksandar@stojkovski.ch                                          
 ######################################################################
 
 ######################################################################
