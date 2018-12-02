@@ -233,20 +233,20 @@ if [[ $ZIMBRA_ACTION == "restore" ]]; then
 
   echo "INFO - Restoring distribution lists members ..."
   for dl in $(cat $ZIMBRA_BACKUP_DIR/distribution_lists.txt); do
-	  for member in $(grep -v '#' $ZIMBRA_BACKUP_DIR_DL/$dl.txt |grep '@'); do
-	    zmprov adlm $dl $member
-	    echo "  -> $member added to list $dl"
-	  done
+    for member in $(grep -v '#' $ZIMBRA_BACKUP_DIR_DL/$dl.txt |grep '@'); do
+      zmprov adlm $dl $member
+      echo "  -> $member added to list $dl"
+    done
   done
 
   echo "INFO - Restoring aliases ..."
   for email in $(cat $ZIMBRA_BACKUP_DIR/emails.txt); do
-	  if [[ -f "$ZIMBRA_BACKUP_DIR_ALIASES/$email.txt" ]]; then
-	    for alias in $(grep '@' $ZIMBRA_BACKUP_DIR_ALIASES/$email.txt); do
-	      zmprov aaa $email $alias
-	      echo "  -> $email has alias $alias"
-	    done
-	  fi
+    if [[ -f "$ZIMBRA_BACKUP_DIR_ALIASES/$email.txt" ]]; then
+      for alias in $(grep '@' $ZIMBRA_BACKUP_DIR_ALIASES/$email.txt); do
+        zmprov aaa $email $alias
+        echo "  -> $email has alias $alias"
+      done
+    fi
   done
 
 fi
