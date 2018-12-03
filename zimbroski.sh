@@ -15,7 +15,7 @@
 # function get_parameters
 ################################
 
-function get_parameters {
+function get_arguments {
 
   while [[ $# -gt 0 ]]; do
     case $1 in
@@ -60,13 +60,11 @@ function dis_usage {
 
     if [[ -n $1 ]]; then
         echo
-        echo "Usage: $1"
+        echo "Error: $1"
     fi
 
     echo
-    echo "Copyright © Aleksandar Stojkovski 2018"
-    echo
-    echo "./zimbroski.sh [ -b <BACKUP_PATH> ] | [ -r <RESTORE_PATH> ]"
+    echo "Usage: ./zimbroski.sh [ -b <BACKUP_PATH> ] | [ -r <RESTORE_PATH> ]"
     echo
     echo "      -b backup path, must exist, must be writable by zimbra user"
     echo "      -r restore path, must exist, must be readable by zimbra user"
@@ -80,7 +78,7 @@ function dis_usage {
 # MAIN
 ######################################################################
 
-get_parameters "$@"
+get_arguments "$@"
 
 ################################
 # setting variables
