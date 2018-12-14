@@ -115,7 +115,7 @@ fi
 # checks to do if action is restore
 if [[ $ZIMBRA_ACTION == "restore" ]]; then
 
-  if [[ ! -w $ZIMBRA_BACKUP_DIR ]]; then
+  if [[ ! -r $ZIMBRA_BACKUP_DIR ]]; then
     dis_usage "directory \"$ZIMBRA_BACKUP_DIR\" is not readable"
   fi
 
