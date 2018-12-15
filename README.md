@@ -1,24 +1,15 @@
-# Zimbroski
+# Zimbroski - the zimbra backup and restore tool
 
 ## Description
-Backup and restore zimbra
+Backup and restore zimbra users, passwords mailboxes, distribution lists.
 
-## Compilation
-`
-make
-`
-
-or, manual compilation
+## Backup
 
 `
-gcc -lm *.c -o adaptive_huffman
+./zimbroski.sh -b <BACKUP_PATH>
 `
-
-## Execution
-Encode
+## Restore
 
 `
-./adaptive_huffman -c <input_file> <output_file>
+./zimbroski.sh -r <RESTORE_PATH>
 `
-
-Decode
