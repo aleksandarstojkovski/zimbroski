@@ -1,4 +1,4 @@
-# Zimbroski - the zimbra backup and restore tool
+# Zimbroski - the open-source zimbra backup and restore tool
 
 ## Description
 Backup and restore zimbra users, passwords mailboxes, distribution lists.
