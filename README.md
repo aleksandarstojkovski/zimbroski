@@ -18,7 +18,7 @@ Run the script with backup argument '-b' on the source server, copy the backup f
 
 ## Test
 
-Tested on the following versions
+The tool has been successfully tested on the following Zimbra versions:
 
 ```
 8.8.X
