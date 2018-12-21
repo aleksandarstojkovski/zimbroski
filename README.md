@@ -14,12 +14,13 @@ Usage: ./zimbroski.sh [ -b <BACKUP_PATH> ] | [ -r <RESTORE_PATH> ]
       -r restore path, must exist, must be readable by zimbra user
 ```
 
-## Backup Zimbra
+### Backup Zimbra
 
 `
 ./zimbroski.sh -b <BACKUP_PATH>
 `
-## Restore Zimbra
+
+### Restore Zimbra
 
 `
 ./zimbroski.sh -r <RESTORE_PATH>
