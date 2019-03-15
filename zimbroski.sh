@@ -68,6 +68,7 @@ function dis_usage {
     echo
     echo "      -b backup path, must exist, must be writable by zimbra user"
     echo "      -r restore path, must exist, must be readable by zimbra user"
+    echo "      -h display usage"
     echo
 
     exit 1
