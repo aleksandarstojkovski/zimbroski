@@ -39,4 +39,4 @@ The tool has been successfully tested on the following Zimbra versions:
 
 ## Donations
 
-Donate PayPal: aleksandar@stojkovski.ch
+PayPal: aleksandar@stojkovski.ch
