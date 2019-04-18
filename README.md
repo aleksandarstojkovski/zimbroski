@@ -36,3 +36,7 @@ The tool has been successfully tested on the following Zimbra versions:
 8.6.X
 8.5.X
 ```
+
+## Donations
+
+Donate PayPal: aleksandar@stojkovski.ch
