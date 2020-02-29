@@ -5,6 +5,12 @@ Backup and restore zimbra users, passwords mailboxes, distribution lists.
 This tool can be used also to migrate Zimbra from one server to another.
 Run the script with backup argument '-b' on the source server, copy the backup folder on the target server and run the script with restore option '-r', everything will be configured as before.
 
+## Installation
+
+```
+git clone https://github.com/aleksandarstojkovski/zimbroski
+```
+
 ## Usage
 
 ```
