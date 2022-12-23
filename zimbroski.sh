@@ -204,28 +204,33 @@ if [[ $ZIMBRA_ACTION == "restore" ]]; then
 
   echo "INFO - Restoring domains ..."
   for domain in $(cat $ZIMBRA_BACKUP_DIR/domains.txt); do
+    echo "adding $domain"
     zmprov cd $domain zimbraAuthMech zimbra
-    echo "  -> $domain added" 
+    echo "  -> $domain added"
   done
 
   echo "INFO - Restoring email accounts and passwords ..."
   for email in $(cat $ZIMBRA_BACKUP_DIR/emails.txt); do
+    echo "adding $email"
     givenName=$(grep givenName: $ZIMBRA_BACKUP_DIR_DATA/$email.txt | cut -d ":" -f2)
     displayName=$(grep displayName: $ZIMBRA_BACKUP_DIR_DATA/$email.txt | cut -d ":" -f2)
     shadowPass=$(cat $ZIMBRA_BACKUP_DIR_PASSWORDS/$email.shadow)
     tmpPass="changeme"
     zmprov ca "$email" "$tmpPass" cn "$givenName" displayName "$displayName" givenName "$givenName" 
     zmprov ma "$email" userPassword "$shadowPass"
+    echo "  -> $email added"
   done
 
   echo "INFO - Restoring mailboxes ..."
   for email in $(cat $ZIMBRA_BACKUP_DIR/emails.txt); do
+    echo "adding $email"
     zmmailbox -z -m $email postRestURL "/?fmt=tgz&resolve=skip" $ZIMBRA_BACKUP_DIR/$email.tgz
     echo "  -> $email added"
   done
 
   echo "INFO - Restoring distribution lists ..."
   for dl in $(cat $ZIMBRA_BACKUP_DIR/distribution_lists.txt); do
+    echo "adding $dl"
     zmprov cdl $dl
     echo "  -> $dl added"
   done
